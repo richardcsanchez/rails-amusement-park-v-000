@@ -1,7 +1,7 @@
  <%= form_for @user do |f| %>
 
     Select Your Name:<br>
-   <%= select_tag :'user_name', options_from_collection_for_select(User.all, :name) %><br>
+   <%= select_tag :'user_name', options_from_collection_for_select(User.all, :user, :name) %><br>
 
      <%= f.label :password, "Enter your password" %><br>
      <%= f.password_field :password %><br>
