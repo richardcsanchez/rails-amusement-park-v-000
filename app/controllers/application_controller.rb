@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?, :admin?
 
     def logged_in?
-      !!current_user
+      session[:user_id]
     end
 
     def require_logged_in
