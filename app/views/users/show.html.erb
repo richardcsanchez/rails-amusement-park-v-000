@@ -12,4 +12,6 @@
   <p>Height: <%= @user.height %> inches</p>
   <p><%= link_to 'Edit', edit_user_path(@user) %></p>
   <p><%= link_to 'See attractions', attractions_path %></p>
-  <%= link_to 'Log Out', signout_path%>
+  <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+    <input type=submit value='Log Out'>
+    <% end %>
