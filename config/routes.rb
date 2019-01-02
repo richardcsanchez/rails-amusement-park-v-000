@@ -6,8 +6,7 @@ Rails.application.routes.draw do
   post "/rides/new", to: "rides#new"
 
   resources :attractions
-  resources :users, only: [:new, :create, :show, :edit]
-
+  resources :users
 
   root "welcome#home"
 
