@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   skip_before_action :require_logged_in, only: [:new, :create]
 
   def new
-    @user = User.find_by_id(:user_id)
+    @user = User.new
   end
 
   def create
